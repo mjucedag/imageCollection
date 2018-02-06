@@ -22,9 +22,15 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     override func viewDidLoad() {
         super.viewDidLoad()
         //Esto se puede hacer desde el storyboard, arrastrando el collection al icono del view controller
-            //seleccionando delegate y datasource.
-//        collectionView.dataSource = self
-//        collectionView.delegate = self
+        //seleccionando delegate y datasource.
+        //collectionView.dataSource = self
+        //collectionView.delegate = self
+        
+        let layout = self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout
+        layout.sectionInset = UIEdgeInsets(top: 0,left: 5,bottom: 0,right: 5)
+        layout.minimumInteritemSpacing = 5
+        layout.itemSize = CGSize(width: (self.collectionView.frame.size.width - 20)/2, height: self.collectionView.frame.size.height/3)
+        
         
         // Do any additional setup after loading the view, typically from a nib.
     }
@@ -50,9 +56,29 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         //Asigna las imagenes al imageView de la celda
         cell.productImage.image = productImages[indexPath.item]
         
+        //Borde
+        cell.layer.borderColor = UIColor.lightGray.cgColor
+        cell.layer.borderWidth = 0.5
+        
         //Pinta la celda ya cargada
         return cell
         
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        
+        //Borde de selección
+        cell?.layer.borderColor = UIColor.gray.cgColor
+        cell?.layer.borderWidth = 2
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        //Deseleccionar borde
+        cell?.layer.borderColor = UIColor.lightGray.cgColor
+        cell?.layer.borderWidth = 0.5
+    }
+    
 }
 
