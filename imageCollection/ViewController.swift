@@ -75,6 +75,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath)
+        
         //Deseleccionar borde
         cell?.layer.borderColor = UIColor.lightGray.cgColor
         cell?.layer.borderWidth = 0.5
