@@ -37,10 +37,10 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jbG-ul-o56">
-                                                    <rect key="frame" x="-2" y="8" width="185" height="133"/>
+                                                    <rect key="frame" x="0.0" y="8" width="181" height="133"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6j-GJ-LKY">
-                                                    <rect key="frame" x="-2" y="152" width="185" height="34"/>
+                                                    <rect key="frame" x="0.0" y="152" width="181" height="34"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="34" id="yCM-fw-zZ6"/>
                                                     </constraints>
@@ -52,13 +52,15 @@
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="jbG-ul-o56" firstAttribute="trailing" secondItem="U6j-GJ-LKY" secondAttribute="trailing" id="0MT-5A-laz"/>
+                                            <constraint firstItem="jbG-ul-o56" firstAttribute="trailing" secondItem="XfM-1X-inF" secondAttribute="trailing" id="0MT-5A-laz"/>
                                             <constraint firstItem="U6j-GJ-LKY" firstAttribute="top" secondItem="jbG-ul-o56" secondAttribute="bottom" constant="11" id="20p-id-5EA"/>
+                                            <constraint firstItem="U6j-GJ-LKY" firstAttribute="leading" secondItem="XfM-1X-inF" secondAttribute="leading" id="8pu-Gs-dAL"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="U6j-GJ-LKY" secondAttribute="bottom" constant="7" id="C8A-5S-gU8"/>
                                             <constraint firstItem="jbG-ul-o56" firstAttribute="leading" secondItem="XfM-1X-inF" secondAttribute="leadingMargin" constant="-10" id="KPc-6N-tO3"/>
                                             <constraint firstItem="jbG-ul-o56" firstAttribute="top" secondItem="XfM-1X-inF" secondAttribute="topMargin" id="XBb-Xi-aa5"/>
+                                            <constraint firstAttribute="trailing" secondItem="U6j-GJ-LKY" secondAttribute="trailing" id="cWf-b2-S2Z"/>
                                             <constraint firstItem="jbG-ul-o56" firstAttribute="centerX" secondItem="XfM-1X-inF" secondAttribute="centerX" id="gxT-Og-neF"/>
-                                            <constraint firstItem="jbG-ul-o56" firstAttribute="leading" secondItem="U6j-GJ-LKY" secondAttribute="leading" id="zis-JO-heE"/>
+                                            <constraint firstItem="jbG-ul-o56" firstAttribute="leading" secondItem="XfM-1X-inF" secondAttribute="leading" id="zis-JO-heE"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="productImage" destination="jbG-ul-o56" id="BwB-Q6-sFG"/>

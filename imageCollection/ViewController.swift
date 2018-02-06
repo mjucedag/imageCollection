@@ -27,9 +27,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         //collectionView.delegate = self
         
         let layout = self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout
-        layout.sectionInset = UIEdgeInsets(top: 0,left: 5,bottom: 0,right: 5)
+        collectionView.contentInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        layout.sectionInset = UIEdgeInsets(top: -5,left: 5,bottom: -5,right: 5)
         layout.minimumInteritemSpacing = 5
-        layout.itemSize = CGSize(width: (self.collectionView.frame.size.width - 20)/2, height: self.collectionView.frame.size.height/3)
+        layout.itemSize = CGSize(width: (self.collectionView.frame.size.width )/2, height: self.collectionView.frame.size.height/3)
         
         
         // Do any additional setup after loading the view, typically from a nib.
